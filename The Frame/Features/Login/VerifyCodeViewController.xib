@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyCodeViewController" customModule="The_Frame" customModuleProvider="target">
+            <connections>
+                <outlet property="btnVerify" destination="I8k-qK-SuJ" id="PgP-zs-5Rt"/>
+                <outlet property="lbMessage" destination="OIR-qO-bYl" id="7gf-ws-dTl"/>
+                <outlet property="lbResend" destination="KYu-Hz-Jxo" id="zcj-kG-nRe"/>
+                <outlet property="vPhoneCode" destination="1kA-xr-2aS" id="WeV-7x-mz5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="RRI-EX-NHy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_background" translatesAutoresizingMaskIntoConstraints="NO" id="5PB-3b-PTG">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập mã OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brb-jG-zp9">
+                    <rect key="frame" x="32" y="119.00000000000001" width="174" height="33.666666666666671"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                    <color key="textColor" red="0.074509803921568626" green="0.082352941176470587" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã OTP được gửi đến số điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIR-qO-bYl">
+                    <rect key="frame" x="32" y="172.66666666666666" width="307" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kA-xr-2aS" customClass="PhoneCodeView" customModule="The_Frame" customModuleProvider="target">
+                    <rect key="frame" x="32" y="220.66666666666666" width="329" height="51.999999999999972"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="ysM-IG-GcH"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gửi lại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYu-Hz-Jxo">
+                    <rect key="frame" x="32" y="296.66666666666669" width="52.333333333333343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8k-qK-SuJ" customClass="CustomButton" customModule="The_Frame" customModuleProvider="target">
+                    <rect key="frame" x="32" y="698" width="329" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="425-cn-tVo"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Xác thực"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusEx">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="I8k-qK-SuJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="1lm-CE-vP4"/>
+                <constraint firstItem="5PB-3b-PTG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2Sc-5p-kMq"/>
+                <constraint firstItem="KYu-Hz-Jxo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="3Qp-mG-S0k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I8k-qK-SuJ" secondAttribute="trailing" constant="32" id="6Dk-Ou-tqX"/>
+                <constraint firstItem="OIR-qO-bYl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="9Dw-Mx-LuJ"/>
+                <constraint firstItem="OIR-qO-bYl" firstAttribute="top" secondItem="Brb-jG-zp9" secondAttribute="bottom" constant="20" id="CYy-lK-Pcp"/>
+                <constraint firstItem="1kA-xr-2aS" firstAttribute="top" secondItem="OIR-qO-bYl" secondAttribute="bottom" constant="24" id="F3R-1c-6XO"/>
+                <constraint firstItem="Brb-jG-zp9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="FyB-h1-XEA"/>
+                <constraint firstItem="5PB-3b-PTG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HQN-fy-8MK"/>
+                <constraint firstItem="KYu-Hz-Jxo" firstAttribute="top" secondItem="1kA-xr-2aS" secondAttribute="bottom" constant="24" id="UFq-o4-esE"/>
+                <constraint firstAttribute="bottom" secondItem="5PB-3b-PTG" secondAttribute="bottom" id="aSv-sp-4ZT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1kA-xr-2aS" secondAttribute="trailing" constant="32" id="c1a-1D-gyL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="I8k-qK-SuJ" secondAttribute="bottom" constant="60" id="cOo-Ul-baQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5PB-3b-PTG" secondAttribute="trailing" id="eBS-DE-VQ6"/>
+                <constraint firstItem="1kA-xr-2aS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="hTD-Hw-Ep4"/>
+                <constraint firstItem="Brb-jG-zp9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="ir8-fg-MXl"/>
+            </constraints>
+            <point key="canvasLocation" x="100" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_background" width="166.66667175292969" height="333.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

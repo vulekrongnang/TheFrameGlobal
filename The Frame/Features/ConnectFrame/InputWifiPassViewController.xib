@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputWifiPassViewController" customModule="The_Frame" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="CJe-rF-9ar"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUH-Qc-wjf">
+                    <rect key="frame" x="76" y="148.66666666666666" width="0.0" height="0.0"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKt-rq-zaI" userLabel="vBack">
+                    <rect key="frame" x="10" y="59" width="40" height="40"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_back" translatesAutoresizingMaskIntoConstraints="NO" id="1Di-V7-sfY">
+                            <rect key="frame" x="8" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="0fx-QB-LVb"/>
+                                <constraint firstAttribute="width" constant="24" id="bHH-v9-6C1"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="1rf-5R-93I"/>
+                        <constraint firstItem="1Di-V7-sfY" firstAttribute="centerY" secondItem="kKt-rq-zaI" secondAttribute="centerY" id="Jpl-8Y-4px"/>
+                        <constraint firstAttribute="height" constant="40" id="gsF-g2-Su7"/>
+                        <constraint firstItem="1Di-V7-sfY" firstAttribute="centerX" secondItem="kKt-rq-zaI" secondAttribute="centerX" id="w4t-bg-JQp"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập mật khẩu Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlW-fm-pWu">
+                    <rect key="frame" x="114.66666666666667" y="68.666666666666671" width="163.66666666666663" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.2156862745" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqA-qx-faD">
+                    <rect key="frame" x="6" y="105" width="381" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="sgj-hL-dJb"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_background" translatesAutoresizingMaskIntoConstraints="NO" id="38a-Kl-h1p">
+                    <rect key="frame" x="0.0" y="106" width="393" height="746"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k68-aZ-mHO">
+                    <rect key="frame" x="12" y="253.33333333333334" width="369" height="370.66666666666663"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_wifi" translatesAutoresizingMaskIntoConstraints="NO" id="sGU-pM-mQT">
+                            <rect key="frame" x="18" y="17.999999999999972" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="JZ0-Wd-7fe"/>
+                                <constraint firstAttribute="height" constant="24" id="Jh0-39-yTc"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1L0-r6-aeN">
+                            <rect key="frame" x="50" y="29.999999999999972" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập mật khẩu Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRn-yd-0zr">
+                            <rect key="frame" x="18" y="73.999999999999972" width="145.33333333333334" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <color key="textColor" red="0.3529411764705882" green="0.37647058823529411" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNo-jE-epf">
+                            <rect key="frame" x="18" y="109.33333333333334" width="333" height="52"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_number_background" translatesAutoresizingMaskIntoConstraints="NO" id="vhg-wE-m1h">
+                                    <rect key="frame" x="0.0" y="0.0" width="333" height="52"/>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số mật khẩu wifi" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZM-0P-327">
+                                    <rect key="frame" x="0.0" y="0.0" width="333" height="52"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="wZM-0P-327" secondAttribute="trailing" id="0gh-4a-W0w"/>
+                                <constraint firstAttribute="bottom" secondItem="wZM-0P-327" secondAttribute="bottom" id="1Zl-Cl-QsI"/>
+                                <constraint firstItem="wZM-0P-327" firstAttribute="leading" secondItem="bNo-jE-epf" secondAttribute="leading" id="6dY-5b-AwV"/>
+                                <constraint firstItem="vhg-wE-m1h" firstAttribute="top" secondItem="bNo-jE-epf" secondAttribute="top" id="8py-kl-fkF"/>
+                                <constraint firstAttribute="bottom" secondItem="vhg-wE-m1h" secondAttribute="bottom" id="QNW-KH-cH8"/>
+                                <constraint firstItem="wZM-0P-327" firstAttribute="top" secondItem="bNo-jE-epf" secondAttribute="top" id="SEG-Xz-2zI"/>
+                                <constraint firstAttribute="trailing" secondItem="vhg-wE-m1h" secondAttribute="trailing" id="XyV-09-Xm4"/>
+                                <constraint firstItem="vhg-wE-m1h" firstAttribute="leading" secondItem="bNo-jE-epf" secondAttribute="leading" id="dYk-FP-1eg"/>
+                                <constraint firstAttribute="height" constant="52" id="gJt-xL-mYX"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-Te-CPE" customClass="CustomButton" customModule="The_Frame" customModuleProvider="target">
+                            <rect key="frame" x="18" y="231.33333333333337" width="333" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="ZSS-SH-f4N"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Kết nối"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chỉ sử dụng wifi 2.4ghz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgo-ej-KlN">
+                            <rect key="frame" x="97.333333333333329" y="321.33333333333326" width="174.33333333333337" height="19.333333333333314"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <color key="textColor" red="0.35294117650000001" green="0.37647058820000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="sGU-pM-mQT" firstAttribute="top" secondItem="k68-aZ-mHO" secondAttribute="top" constant="18" id="BsN-yZ-722"/>
+                        <constraint firstItem="bNo-jE-epf" firstAttribute="top" secondItem="rRn-yd-0zr" secondAttribute="bottom" constant="16" id="BtI-gk-7wa"/>
+                        <constraint firstAttribute="bottom" secondItem="zgo-ej-KlN" secondAttribute="bottom" constant="30" id="HXC-RZ-2OL"/>
+                        <constraint firstAttribute="trailing" secondItem="bNo-jE-epf" secondAttribute="trailing" constant="18" id="KTn-t7-GQs"/>
+                        <constraint firstItem="gYx-Te-CPE" firstAttribute="top" secondItem="bNo-jE-epf" secondAttribute="bottom" constant="70" id="OgI-4N-2cN"/>
+                        <constraint firstItem="1L0-r6-aeN" firstAttribute="centerY" secondItem="sGU-pM-mQT" secondAttribute="centerY" id="SEg-9p-3TZ"/>
+                        <constraint firstItem="sGU-pM-mQT" firstAttribute="leading" secondItem="k68-aZ-mHO" secondAttribute="leading" constant="18" id="VUs-h1-9Z9"/>
+                        <constraint firstItem="gYx-Te-CPE" firstAttribute="leading" secondItem="k68-aZ-mHO" secondAttribute="leading" constant="18" id="VzK-vp-URo"/>
+                        <constraint firstItem="bNo-jE-epf" firstAttribute="leading" secondItem="k68-aZ-mHO" secondAttribute="leading" constant="18" id="aNd-5M-g79"/>
+                        <constraint firstAttribute="trailing" secondItem="gYx-Te-CPE" secondAttribute="trailing" constant="18" id="gBR-eq-8jC"/>
+                        <constraint firstItem="zgo-ej-KlN" firstAttribute="centerX" secondItem="k68-aZ-mHO" secondAttribute="centerX" id="hgm-KU-oD7"/>
+                        <constraint firstItem="zgo-ej-KlN" firstAttribute="top" secondItem="gYx-Te-CPE" secondAttribute="bottom" constant="30" id="hzb-nO-hkp"/>
+                        <constraint firstItem="rRn-yd-0zr" firstAttribute="leading" secondItem="k68-aZ-mHO" secondAttribute="leading" constant="18" id="jLv-5P-TWg"/>
+                        <constraint firstItem="1L0-r6-aeN" firstAttribute="leading" secondItem="sGU-pM-mQT" secondAttribute="trailing" constant="8" id="xv1-4a-ou4"/>
+                        <constraint firstItem="rRn-yd-0zr" firstAttribute="top" secondItem="sGU-pM-mQT" secondAttribute="bottom" constant="32" id="zh7-Lg-08x"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusEx">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kKt-rq-zaI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="1kZ-NZ-hlZ"/>
+                <constraint firstItem="kKt-rq-zaI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3fE-cc-92x"/>
+                <constraint firstItem="LqA-qx-faD" firstAttribute="top" secondItem="kKt-rq-zaI" secondAttribute="bottom" constant="6" id="4bo-br-VRv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="k68-aZ-mHO" secondAttribute="trailing" constant="12" id="7L4-Em-PXh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="38a-Kl-h1p" secondAttribute="trailing" id="7kb-N3-RbT"/>
+                <constraint firstItem="k68-aZ-mHO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="Muf-Qx-bH3"/>
+                <constraint firstAttribute="trailing" secondItem="LqA-qx-faD" secondAttribute="trailing" constant="6" id="OjX-5a-ZMT"/>
+                <constraint firstItem="LqA-qx-faD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="boH-o9-AFu"/>
+                <constraint firstItem="SlW-fm-pWu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="cv7-cG-soy"/>
+                <constraint firstAttribute="bottom" secondItem="38a-Kl-h1p" secondAttribute="bottom" id="dSQ-fM-q1A"/>
+                <constraint firstItem="SlW-fm-pWu" firstAttribute="centerY" secondItem="kKt-rq-zaI" secondAttribute="centerY" id="eQh-lC-jka"/>
+                <constraint firstItem="38a-Kl-h1p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="igG-p6-aLH"/>
+                <constraint firstItem="38a-Kl-h1p" firstAttribute="top" secondItem="LqA-qx-faD" secondAttribute="bottom" id="lCz-g9-6xl"/>
+                <constraint firstItem="k68-aZ-mHO" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="xY7-5d-Gbw"/>
+            </constraints>
+            <point key="canvasLocation" x="31" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_background" width="166.66667175292969" height="333.33334350585938"/>
+        <image name="ic_back" width="32" height="32"/>
+        <image name="ic_wifi" width="32" height="32.333332061767578"/>
+        <image name="phone_number_background" width="496" height="69.333335876464844"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

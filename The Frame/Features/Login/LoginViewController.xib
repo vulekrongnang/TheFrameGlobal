@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="The_Frame" customModuleProvider="target">
+            <connections>
+                <outlet property="IQLayoutGuideConstraint" destination="3cH-gd-XLa" id="grr-6H-VGJ"/>
+                <outlet property="btnLogin" destination="h2C-6Z-Ngd" id="974-mf-FPs"/>
+                <outlet property="tfPhoneNumber" destination="3ZU-AO-WS3" id="Kaw-uj-HgB"/>
+                <outlet property="view" destination="iN0-l3-epB" id="DWj-RD-wC0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="3lD-sa-hHa">
+                    <rect key="frame" x="0.0" y="-20" width="393" height="872"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="dtr-cp-d5n">
+                    <rect key="frame" x="106.66666666666669" y="139" width="180" height="87"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="DJ1-pH-VNZ"/>
+                        <constraint firstAttribute="height" constant="87" id="Ga9-LG-hZm"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtG-QR-Zmg">
+                    <rect key="frame" x="32" y="586" width="329" height="52"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_number_background" translatesAutoresizingMaskIntoConstraints="NO" id="rVw-aT-zhO">
+                            <rect key="frame" x="0.0" y="0.0" width="329" height="52"/>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số điện thoại" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ZU-AO-WS3">
+                            <rect key="frame" x="0.0" y="0.0" width="329" height="52"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rVw-aT-zhO" secondAttribute="bottom" id="02M-aQ-eLO"/>
+                        <constraint firstAttribute="bottom" secondItem="3ZU-AO-WS3" secondAttribute="bottom" id="0e0-Zy-0p5"/>
+                        <constraint firstItem="3ZU-AO-WS3" firstAttribute="top" secondItem="mtG-QR-Zmg" secondAttribute="top" id="2xA-qP-fHi"/>
+                        <constraint firstAttribute="trailing" secondItem="rVw-aT-zhO" secondAttribute="trailing" id="FDI-H3-pND"/>
+                        <constraint firstAttribute="height" constant="52" id="JXd-iZ-8O2"/>
+                        <constraint firstItem="rVw-aT-zhO" firstAttribute="leading" secondItem="mtG-QR-Zmg" secondAttribute="leading" id="YKM-2U-iS1"/>
+                        <constraint firstAttribute="trailing" secondItem="3ZU-AO-WS3" secondAttribute="trailing" id="lrA-dp-C5Y"/>
+                        <constraint firstItem="rVw-aT-zhO" firstAttribute="top" secondItem="mtG-QR-Zmg" secondAttribute="top" id="sQH-zr-PND"/>
+                        <constraint firstItem="3ZU-AO-WS3" firstAttribute="leading" secondItem="mtG-QR-Zmg" secondAttribute="leading" id="yVv-p6-M3n"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2C-6Z-Ngd" customClass="CustomButton" customModule="The_Frame" customModuleProvider="target">
+                    <rect key="frame" x="32" y="698" width="329" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Hrs-YR-V3e"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Đăng nhập"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEs-dL-lwM">
+                    <rect key="frame" x="40" y="460.33333333333331" width="313" height="82.666666666666686"/>
+                    <string key="text">Bringing Our Members
+the best products, inspiration and stories in Life.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3lD-sa-hHa" secondAttribute="trailing" id="1Ns-IE-UZT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="h2C-6Z-Ngd" secondAttribute="trailing" constant="32" id="2PK-wq-GC8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="h2C-6Z-Ngd" secondAttribute="bottom" constant="60" id="3cH-gd-XLa"/>
+                <constraint firstAttribute="bottom" secondItem="3lD-sa-hHa" secondAttribute="bottom" id="E7E-va-fTC"/>
+                <constraint firstItem="h2C-6Z-Ngd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="HLn-g6-LVe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eEs-dL-lwM" secondAttribute="trailing" constant="40" id="IvL-Ok-71D"/>
+                <constraint firstItem="eEs-dL-lwM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="QRW-7g-Chm"/>
+                <constraint firstItem="mtG-QR-Zmg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="QaZ-dS-aXy"/>
+                <constraint firstItem="mtG-QR-Zmg" firstAttribute="top" secondItem="eEs-dL-lwM" secondAttribute="bottom" constant="43" id="blm-MQ-xvb"/>
+                <constraint firstItem="dtr-cp-d5n" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="duy-Ht-2EN"/>
+                <constraint firstItem="h2C-6Z-Ngd" firstAttribute="top" secondItem="mtG-QR-Zmg" secondAttribute="bottom" constant="60" id="iln-Vx-9s6"/>
+                <constraint firstItem="3lD-sa-hHa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-20" id="oJj-Bj-Swj"/>
+                <constraint firstItem="3lD-sa-hHa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sv7-8E-mEN"/>
+                <constraint firstItem="dtr-cp-d5n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="80" id="voZ-Vl-bgm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mtG-QR-Zmg" secondAttribute="trailing" constant="32" id="zfI-M8-CIp"/>
+            </constraints>
+            <point key="canvasLocation" x="24" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_logo_white" width="238.66667175292969" height="116"/>
+        <image name="login_background" width="360" height="540.66668701171875"/>
+        <image name="phone_number_background" width="496" height="69.333335876464844"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
