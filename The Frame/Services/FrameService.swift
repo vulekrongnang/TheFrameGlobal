@@ -36,7 +36,8 @@ class FrameService: NSObject {
         let frameDic: NSDictionary =
         ["id": frame.id ?? "",
          "code": frame.code ?? "",
-         "name": frame.name ?? ""
+         "name": frame.name ?? "",
+         "group": frame.group ?? ""
         ]
         let frameNote = FrameService.ref.child(frame.id ?? "")
         frameNote.setValue(frameDic) { error, ref in
@@ -47,7 +48,7 @@ class FrameService: NSObject {
                 ]
                 frameNote.child("users").child(user.id ?? "").setValue(frameUserDic)
             })
-            onSuccess(frame)
+            self.updateFrameMedia(frame: frame, onSuccess: onSuccess, onError: onError)
         }
     }
     
@@ -123,20 +124,22 @@ class FrameService: NSObject {
     }
     
     func checkFrameConnectStatus(frame: FrameModel, onSuccess: @escaping ((String?) -> Void), onError: @escaping ((String?) -> Void)) {
-        FrameService.ref.child(frame.id ?? "").child("status").setValue("ping \(Date().currentTimeMillis())")
         FrameService.ref.child(frame.id ?? "").child("status").observe(.value, with: { dataSnapshot in
             if let data = dataSnapshot.value as? String {
                 if data.contains("pong") {
-                    let timeStamp = data.split(separator: " ")[1].lowercased()
-                    let time = Date().currentTimeMillis() - (Int64(timeStamp) ?? 0)
                     onSuccess(frame.id)
                 }
-            } else {
-                onError(frame.id)
             }
-        }) { error in
-            onError(frame.id)
-        }
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 15, execute: {
+            FrameService.ref.child(frame.id ?? "").child("status").setValue("ping \(Date().currentTimeMillis())")
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 45, execute: {
+            FrameService.ref.child(frame.id ?? "").child("status").setValue("ping \(Date().currentTimeMillis())")
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 75, execute: {
+            FrameService.ref.child(frame.id ?? "").child("status").setValue("ping \(Date().currentTimeMillis())")
+        })
         DispatchQueue.main.asyncAfter(deadline: .now() + 120, execute: {
             onError(frame.id)
         })

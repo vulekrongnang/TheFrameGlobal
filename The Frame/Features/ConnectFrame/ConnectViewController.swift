@@ -26,6 +26,8 @@ class ConnectViewController: BaseViewController {
     var frameCode: String = ""
     var isReconnecting = false
     var isFrameConnected = false
+    
+    var postList: [PostModel]? = nil
 
     enum BLELifecycleState: String {
         case bluetoothNotReady
@@ -57,6 +59,7 @@ class ConnectViewController: BaseViewController {
     @IBOutlet weak var labelSubscription: UILabel!
 
     let timeFormatter = DateFormatter()
+    private var tempFrame: FrameModel? = nil
     
     
     @IBOutlet weak var vViewPager: UIView!
@@ -87,6 +90,8 @@ class ConnectViewController: BaseViewController {
         timeFormatter.dateFormat = "HH:mm:ss"
         textViewLog.layoutManager.allowsNonContiguousLayout = false // fixes not working scrollRangeToVisible
         appendLog("viewDidLoad")
+        
+        tempFrame = nil
 
         initViewControllers()
         
@@ -125,6 +130,12 @@ class ConnectViewController: BaseViewController {
         mSelectWifiVC.didSelectedWifi = { [weak self] wifiName in
             guard let self = self else {return}
             self.mPageViewController.setViewControllers([self.mListViewController[2]], direction: .forward, animated: true)
+            self.mInputWifiPassVC.mWifiName = wifiName
+        }
+        
+        mInputWifiPassVC.didSelectConnect = { [weak self] pass in
+            guard let self = self else {return}
+            self.requestConnectWifi(name: self.mInputWifiPassVC.mWifiName, password: pass)
         }
     }
 }
@@ -461,6 +472,7 @@ extension ConnectViewController: ConnectBLEDelegate {
     func requestConnectWifi(name: String, password: String) {
         let text = "[\(name),\(password)]"
         let data = text.data(using: .utf8) ?? Data()
+        self.showLoading()
         bleWriteCharacteristic(uuid: uuidWifiInfo, data: data)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
             if (self.isReconnecting) {
@@ -481,22 +493,31 @@ extension ConnectViewController: ConnectBLEDelegate {
     }
     
     func createTempFrame() {
-        let frame = FrameModel()
-        frame.id = "\(Date().currentTimeMillis())"
-        frame.code = frameCode
-        frame.name = ""
-        FrameService.instance.createFrame(frame: frame, onSuccess: { [weak self] tempFrame in
-            self?.onCreateTempFrameSuccess(frame: tempFrame)
-        }, onError: { [weak self] message in
-            self?.hideLoading()
-            self?.showAlertError(message: message)
-        })
+        let group = PreferenceUtils.instance.getCurrentGroup()
+        if tempFrame == nil {
+            tempFrame = FrameModel()
+            tempFrame!.id = "\(Date().currentTimeMillis())"
+            tempFrame!.code = frameCode
+            tempFrame!.name = ""
+            tempFrame!.users = [PreferenceUtils.instance.getUser()]
+            tempFrame!.group = group.id ?? ""
+            tempFrame!.media = group.medias
+            
+            FrameService.instance.createFrame(frame: tempFrame!, onSuccess: { [weak self] tempFrame in
+                self?.onCreateTempFrameSuccess(frame: tempFrame)
+            }, onError: { [weak self] message in
+                self?.hideLoading()
+                self?.showAlertError(message: message)
+            })
+        } else {
+            self.onCreateTempFrameSuccess(frame: tempFrame!)
+        }
     }
     
     func onCreateTempFrameSuccess(frame: FrameModel) {
         let data = frame.id?.data(using: .utf8) ?? Data()
         bleWriteCharacteristic(uuid: uuidFrameId, data: data)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
             self.checkFrameStatus(frame: frame)
         })
     }
@@ -518,13 +539,37 @@ extension ConnectViewController: ConnectBLEDelegate {
     }
     
     func onFrameConnectSuccess(frame: FrameModel) {
-        self.hideLoading()
         if (self.isReconnecting) {
+            self.hideLoading()
             self.navigationController?.popViewController(animated: true)
         } else {
-            self.mPageViewController.setViewControllers([mListViewController[2]], direction: .forward, animated: true)
-//            self.mInputNameViewController.mCode = frameCode
-//            self.mInputNameViewController.mFrame = frame
+            PreferenceUtils.instance.saveCurrentFrame(frameModel: frame)
+            updateGroup(frame: frame)
+        }
+    }
+    
+    
+    private func updateGroup(frame: FrameModel) {
+        let currentGroup = PreferenceUtils.instance.getCurrentGroup()
+        currentGroup.frame = frame.id
+        GroupService.instance.updateGroup(group: currentGroup) { [weak self] group in
+            PreferenceUtils.instance.saveCurrentGroup(groupModel: group)
+            self?.hideLoading()
+            self?.handleUpdateGroupSuccess(group: group)
+        } onError: { [weak self] message in
+            self?.hideLoading()
+            self?.showAlertError(message: message)
+        }
+    }
+    
+    private func handleUpdateGroupSuccess(group: GroupModel) {
+        if group.posts?.isEmpty == false {
+            let vc = SyncMediaViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            self.showAlert(message: "Thêm khung tranh thành công") { [weak self] in
+                self?.appDelegate.showHomeView()
+            }
         }
     }
 }

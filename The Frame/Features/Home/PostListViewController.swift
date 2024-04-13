@@ -16,7 +16,7 @@ class PostListViewController: BaseViewController {
     @IBOutlet weak var lbGroupName: UILabel!
     
     private var mCurrentGroup: GroupModel? = nil
-    private var postList = [PostModel]()
+    var postList = [PostModel]()
     
     private var mNumberPostLoaded = 0
     private var mNumberPostNeedLoad = 0

@@ -21,7 +21,7 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
         
         phoneLoginService.delegate = self
-        tfPhoneNumber.text = "+84971628167"
+        tfPhoneNumber.text = "+84"
         btnLogin.didTap = { [weak self] in
             self?.handleLogin()
         }

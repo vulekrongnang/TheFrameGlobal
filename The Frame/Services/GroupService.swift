@@ -50,7 +50,8 @@ class GroupService: NSObject {
         var groupDic =
         ["id": group.id ?? "",
          "name": group.name ?? "",
-         "avatar": group.avatar ?? ""
+         "avatar": group.avatar ?? "",
+         "frame": group.frame ?? ""
         ] as [String: Any]
         
         if let posts = group.posts {

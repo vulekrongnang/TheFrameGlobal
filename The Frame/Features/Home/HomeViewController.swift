@@ -64,8 +64,13 @@ class HomeViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         tabAddFrame.rx.tapGesture().when(.recognized).subscribe({ [weak self] _ in
-            let vc = ConnectViewController()
-            self?.navigationController?.pushViewController(vc, animated: true)
+            let group = PreferenceUtils.instance.getCurrentGroup()
+            if (group.frame ?? "").isEmpty {
+                let vc = ConnectViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                self?.showAlertError(message: "Nhóm đã có khung tranh")
+            }
         }).disposed(by: disposeBag)
         
         initPager()

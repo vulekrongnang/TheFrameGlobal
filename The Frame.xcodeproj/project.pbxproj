@@ -117,6 +117,9 @@
 		91FAAF1B2BBD5F3F0026D6A7 /* WifiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAAF192BBD5F3F0026D6A7 /* WifiCell.swift */; };
 		91FAAF1E2BBD5FD90026D6A7 /* SelectWifiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FAAF1C2BBD5FD90026D6A7 /* SelectWifiViewController.xib */; };
 		91FAAF1F2BBD5FD90026D6A7 /* SelectWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAAF1D2BBD5FD90026D6A7 /* SelectWifiViewController.swift */; };
+		FABD9C932BBDA4050062364F /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD9C922BBDA4050062364F /* AddUserViewController.swift */; };
+		FABD9C952BBDA4420062364F /* SyncMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD9C942BBDA4420062364F /* SyncMediaViewController.swift */; };
+		FABD9C972BBDA4E20062364F /* SyncMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABD9C962BBDA4E20062364F /* SyncMediaViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +209,9 @@
 		91FAAF192BBD5F3F0026D6A7 /* WifiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiCell.swift; sourceTree = "<group>"; };
 		91FAAF1C2BBD5FD90026D6A7 /* SelectWifiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectWifiViewController.xib; sourceTree = "<group>"; };
 		91FAAF1D2BBD5FD90026D6A7 /* SelectWifiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiViewController.swift; sourceTree = "<group>"; };
+		FABD9C922BBDA4050062364F /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		FABD9C942BBDA4420062364F /* SyncMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncMediaViewController.swift; sourceTree = "<group>"; };
+		FABD9C962BBDA4E20062364F /* SyncMediaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyncMediaViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +348,7 @@
 				9117686A2BB9B4A3000B1EE6 /* GroupCell.xib */,
 				914B02552BBD0DD600DC59E2 /* UserCell.swift */,
 				914B02562BBD0DD600DC59E2 /* UserCell.xib */,
+				FABD9C922BBDA4050062364F /* AddUserViewController.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -458,6 +465,8 @@
 				91FAAF182BBD5F3F0026D6A7 /* WifiCell.xib */,
 				91FAAF1D2BBD5FD90026D6A7 /* SelectWifiViewController.swift */,
 				91FAAF1C2BBD5FD90026D6A7 /* SelectWifiViewController.xib */,
+				FABD9C942BBDA4420062364F /* SyncMediaViewController.swift */,
+				FABD9C962BBDA4E20062364F /* SyncMediaViewController.xib */,
 			);
 			path = ConnectFrame;
 			sourceTree = "<group>";
@@ -637,6 +646,7 @@
 				91AE06E92B9372610008E4C6 /* GoogleService-Info.plist in Resources */,
 				91A0033F2B9395F400873941 /* PhoneCodeItemView.xib in Resources */,
 				91AE06982B9359550008E4C6 /* Assets.xcassets in Resources */,
+				FABD9C972BBDA4E20062364F /* SyncMediaViewController.xib in Resources */,
 				91C50D422B9761E600CF581A /* CreateGroupViewController.xib in Resources */,
 				914B02582BBD0DD600DC59E2 /* UserCell.xib in Resources */,
 				91AE06962B9359540008E4C6 /* Main.storyboard in Resources */,
@@ -699,6 +709,7 @@
 				916A384A2BB85B6A00871250 /* PreferenceUtils.swift in Sources */,
 				918BF3D42B94A9650041BDD5 /* CustomButton.swift in Sources */,
 				918BF3D62B94AF5E0041BDD5 /* UIColorExtension.swift in Sources */,
+				FABD9C932BBDA4050062364F /* AddUserViewController.swift in Sources */,
 				918BF3EE2B94C9550041BDD5 /* Enum.swift in Sources */,
 				918BF3DF2B94C7C40041BDD5 /* MediaModel.swift in Sources */,
 				91A003382B93915900873941 /* UIApplicationExtension.swift in Sources */,
@@ -749,6 +760,7 @@
 				91FAAF0B2BBD5EAD0026D6A7 /* ScanView.swift in Sources */,
 				91AE06EC2B9374470008E4C6 /* PhoneLoginService.swift in Sources */,
 				918BF3F62B94CDA70041BDD5 /* CreateGroupViewController.swift in Sources */,
+				FABD9C952BBDA4420062364F /* SyncMediaViewController.swift in Sources */,
 				918BF3E42B94C8070041BDD5 /* UploadedMediaModel.swift in Sources */,
 				91FAAF072BBD5EAD0026D6A7 /* HeaderVC.swift in Sources */,
 				91AE06A52B935F9D0008E4C6 /* SplashViewController.swift in Sources */,
@@ -898,8 +910,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RD3USDX79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The Frame/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Chúng tôi cần quyền truy cập vào Bluetooth để có thể chia sẽ thông tin và hỗ trợ kết nối Wifi ở Khung tranh bạn đang sở hữu";
@@ -912,13 +926,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vule.frame.app.The-Frame";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.memouser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -931,8 +947,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RD3USDX79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The Frame/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Chúng tôi cần quyền truy cập vào Bluetooth để có thể chia sẽ thông tin và hỗ trợ kết nối Wifi ở Khung tranh bạn đang sở hữu";
@@ -945,13 +963,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vule.frame.app.The-Frame";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.memouser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

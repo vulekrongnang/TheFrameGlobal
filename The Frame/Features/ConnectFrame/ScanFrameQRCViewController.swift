@@ -18,8 +18,8 @@ class ScanFrameQRCViewController: BaseViewController {
     
     private var mWifiList = [String]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let authorized = SPPermissions.Permission.camera.authorized
         if authorized {
@@ -36,9 +36,11 @@ class ScanFrameQRCViewController: BaseViewController {
     
     func initScanView() {
         let vc = ScannerVC()
-        vc.setupScanner("Kết nối Wifi", .white, .none, nil ){ (result) in
+        vc.setupScanner("Quét mã QR", .white, .none, nil ){ (result) in
             self.scanQRCSuccess(result)
         }
+        vc.willMove(toParent: self)
+        addChild(vc)
         vc.view.frame = self.safeAreaview.bounds
         view.addSubview(vc.view)
         vc.didMove(toParent: self)

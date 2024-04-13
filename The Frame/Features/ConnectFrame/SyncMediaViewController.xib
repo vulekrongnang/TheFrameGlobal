@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SyncMediaViewController" customModule="The_Frame" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="8YW-cs-bqC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_background" translatesAutoresizingMaskIntoConstraints="NO" id="9x0-Ef-ufc">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-Ji-VTw">
+                    <rect key="frame" x="101.66666666666669" y="119" width="190" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="190" id="3wM-Zk-BAC"/>
+                        <constraint firstAttribute="height" constant="128" id="izc-uI-2SS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đồng bộ media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVm-eP-xYH">
+                    <rect key="frame" x="121" y="287" width="151" height="26.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quá trình đồng bộ có thể mất vài phút. Bạn vui lòng chờ trong giây lát." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-Pa-awF">
+                    <rect key="frame" x="18" y="373.33333333333331" width="357" height="38.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EI3-Pa-awF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="18" id="2Rd-Zw-SJJ"/>
+                <constraint firstItem="9x0-Ef-ufc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AFB-2w-sG9"/>
+                <constraint firstAttribute="bottom" secondItem="9x0-Ef-ufc" secondAttribute="bottom" id="HPa-fa-eRJ"/>
+                <constraint firstItem="zVm-eP-xYH" firstAttribute="top" secondItem="lx6-Ji-VTw" secondAttribute="bottom" constant="40" id="JrC-zt-ttw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EI3-Pa-awF" secondAttribute="trailing" constant="18" id="MEQ-oJ-WQE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9x0-Ef-ufc" secondAttribute="trailing" id="XEN-22-VtN"/>
+                <constraint firstItem="zVm-eP-xYH" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="bpH-x8-JIx"/>
+                <constraint firstItem="lx6-Ji-VTw" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="eYn-tu-pmp"/>
+                <constraint firstItem="lx6-Ji-VTw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="hQY-gJ-TSj"/>
+                <constraint firstItem="EI3-Pa-awF" firstAttribute="top" secondItem="zVm-eP-xYH" secondAttribute="bottom" constant="60" id="pJ0-Ax-vRu"/>
+                <constraint firstItem="9x0-Ef-ufc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yzm-v0-NF6"/>
+            </constraints>
+            <point key="canvasLocation" x="39" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_background" width="166.66667175292969" height="333.33334350585938"/>
+        <image name="app_logo" width="179" height="87"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

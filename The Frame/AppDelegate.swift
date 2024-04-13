@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setRootView() {
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.overrideUserInterfaceStyle = .light
         let splashVC = SplashViewController()
         let nav = UINavigationController(rootViewController: splashVC)
         window?.rootViewController = nav
@@ -45,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func showCreateGroupView() {
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.overrideUserInterfaceStyle = .light
         let createGroupVC = CreateGroupViewController()
         let nav = UINavigationController(rootViewController: createGroupVC)
         window?.rootViewController = nav
@@ -53,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func showHomeView() {
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.overrideUserInterfaceStyle = .light
         let HomeVC = HomeViewController()
         let nav = UINavigationController(rootViewController: HomeVC)
         window?.rootViewController = nav

@@ -107,6 +107,31 @@ class AddPostViewController: BaseViewController {
         
         GroupService.instance.updateGroup(group: currentGroup) { [weak self] group in
             PreferenceUtils.instance.saveCurrentGroup(groupModel: group)
+            if (group.frame?.isEmpty == false) {
+                self?.updateFrame(post: post)
+            } else {
+                self?.showAlert(message: "Thêm bài đăng thành công") { [weak self] in
+                    self?.navigationController?.popViewController(animated: true)
+                }
+            }
+        } onError: { [weak self] message in
+            self?.hideLoading()
+            self?.showAlertError(message: message)
+        }
+    }
+    
+    private func updateFrame(post: PostModel) {
+        let frame = PreferenceUtils.instance.getCurrentFrame()
+        let media = MediaModel()
+        media.id = Date().currentTimeMillis()
+        media.type = post.mediaType
+        media.url = post.mediaUrl
+        if (frame.media == nil) {
+            frame.media = [MediaModel]()
+        }
+        frame.media?.append(media)
+        FrameService.instance.updateFrame(frame: frame) { [weak self] updatedFrame in
+            PreferenceUtils.instance.saveCurrentFrame(frameModel: updatedFrame)
             self?.hideLoading()
             self?.showAlert(message: "Thêm bài đăng thành công") { [weak self] in
                 self?.navigationController?.popViewController(animated: true)

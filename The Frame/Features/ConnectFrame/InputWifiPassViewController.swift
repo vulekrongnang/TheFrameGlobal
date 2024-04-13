@@ -7,27 +7,29 @@ import RxGesture
 class InputWifiPassViewController: BaseViewController {
     
     @IBOutlet weak var lblWifiName: UILabel!
-    @IBOutlet weak var ivBack: UIImageView!
-    
+    @IBOutlet weak var vBack: UIView!
     @IBOutlet weak var tfWifiPass: UITextField!
+    @IBOutlet weak var btnConnect: CustomButton!
+    
     var didSelectBack: ((String) -> Void)?
     var didSelectConnect: ((String) -> Void)?
     
-    private var mWifiName: String = ""
-    
-    public static func newInstance(wifiName: String) -> InputWifiPassViewController {
-        let vc = InputWifiPassViewController()
-        vc.mWifiName = wifiName
-        return vc
+    var mWifiName: String = "" {
+        didSet {
+            lblWifiName.text = mWifiName
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        lblWifiName.text = mWifiName
-//        ivBack.rx.tapGesture().when(.recognized).subscribe({ _ in
-//            self.didSelectBack?("")
-//        }).disposed(by: disposeBag)
+        vBack.rx.tapGesture().when(.recognized).subscribe({ [weak self] _ in
+            self?.didSelectBack?("")
+        }).disposed(by: disposeBag)
+        
+        btnConnect.didTap = { [weak self] in
+            self?.didSelectConnect?(self?.tfWifiPass.text ?? "")
+        }
     }
     
     @IBAction func didTouchOnConnect(_ sender: Any) {

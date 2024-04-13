@@ -13,8 +13,7 @@ class GroupCell: UITableViewCell {
 
     @IBOutlet weak var lbGroupName: UILabel!
     @IBOutlet weak var lbInfo: UILabel!
-    @IBOutlet weak var btnEdit: UIImageView!
-    @IBOutlet weak var btnDelete: UIImageView!
+    @IBOutlet weak var btnEdit: UIView!
     
     private var disposeBag = DisposeBag()
     private var isHandlingClick = false
@@ -26,12 +25,6 @@ class GroupCell: UITableViewCell {
         lbInfo.text = "\(group.users?.count ?? 0) thành viên"
         
         btnEdit.isHidden = !isEditing
-        btnDelete.isHidden = true//!isEditing
-        
-        btnDelete.rx.tapGesture().when(.recognized).subscribe({[weak self] _ in
-            self?.didSelectDelete?()
-        }).disposed(by: disposeBag)
-        
         btnEdit.rx.tapGesture().when(.recognized).subscribe({[weak self] _ in
             if (self?.isHandlingClick == false) {
                 self?.preventClick()

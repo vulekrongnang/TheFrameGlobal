@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,38 +40,42 @@
                                 <color key="textColor" red="0.3529411764705882" green="0.37647058823529411" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-Yi-JUd">
-                                <rect key="frame" x="373" y="24.666666666666671" width="24" height="24"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1a7-TJ-kz7">
+                                <rect key="frame" x="353" y="14.666666666666664" width="44" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-Yi-JUd">
+                                        <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="IP1-zq-Avm"/>
+                                            <constraint firstAttribute="width" constant="24" id="Kem-NL-GGa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="IP1-zq-Avm"/>
-                                    <constraint firstAttribute="width" constant="24" id="Kem-NL-GGa"/>
+                                    <constraint firstAttribute="height" constant="44" id="Cfk-ZD-rjt"/>
+                                    <constraint firstItem="gV5-Yi-JUd" firstAttribute="centerY" secondItem="1a7-TJ-kz7" secondAttribute="centerY" id="E6n-zd-zuo"/>
+                                    <constraint firstItem="gV5-Yi-JUd" firstAttribute="centerX" secondItem="1a7-TJ-kz7" secondAttribute="centerX" id="OC9-8O-Ou9"/>
+                                    <constraint firstAttribute="width" constant="44" id="itM-cm-ebr"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_delete" translatesAutoresizingMaskIntoConstraints="NO" id="SUm-kI-o9h">
-                                <rect key="frame" x="341" y="24.666666666666671" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="Tpq-iz-mM1"/>
-                                    <constraint firstAttribute="height" constant="24" id="ltH-yk-8Dm"/>
-                                </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SUm-kI-o9h" firstAttribute="centerY" secondItem="gV5-Yi-JUd" secondAttribute="centerY" id="6Vu-4f-CS7"/>
+                            <constraint firstItem="1a7-TJ-kz7" firstAttribute="centerY" secondItem="gxO-Nf-aCo" secondAttribute="centerY" id="57c-Dn-Enb"/>
                             <constraint firstItem="cly-QQ-hLf" firstAttribute="top" secondItem="gxO-Nf-aCo" secondAttribute="top" constant="16" id="7kR-oe-bZY"/>
-                            <constraint firstItem="gV5-Yi-JUd" firstAttribute="centerY" secondItem="gxO-Nf-aCo" secondAttribute="centerY" id="EqO-b3-Y1g"/>
                             <constraint firstItem="XEJ-0V-g9g" firstAttribute="leading" secondItem="gxO-Nf-aCo" secondAttribute="leading" id="HXh-ZF-ewQ"/>
                             <constraint firstAttribute="trailing" secondItem="XEJ-0V-g9g" secondAttribute="trailing" id="Kis-mN-3Q9"/>
+                            <constraint firstAttribute="trailing" secondItem="1a7-TJ-kz7" secondAttribute="trailing" constant="20" id="Rwg-8q-D0H"/>
                             <constraint firstItem="XEJ-0V-g9g" firstAttribute="top" secondItem="hmo-Az-TnL" secondAttribute="bottom" constant="16" id="SHp-Up-uQP"/>
                             <constraint firstAttribute="height" constant="73" id="W2g-J5-7ke"/>
                             <constraint firstItem="cly-QQ-hLf" firstAttribute="leading" secondItem="gxO-Nf-aCo" secondAttribute="leading" constant="20" id="fYP-yh-cFM"/>
                             <constraint firstAttribute="bottom" secondItem="XEJ-0V-g9g" secondAttribute="bottom" id="gMF-Ei-hmS"/>
                             <constraint firstItem="hmo-Az-TnL" firstAttribute="leading" secondItem="gxO-Nf-aCo" secondAttribute="leading" constant="20" id="gSG-T1-lif"/>
-                            <constraint firstAttribute="trailing" secondItem="gV5-Yi-JUd" secondAttribute="trailing" constant="20" id="lOX-iB-B9T"/>
-                            <constraint firstItem="gV5-Yi-JUd" firstAttribute="leading" secondItem="SUm-kI-o9h" secondAttribute="trailing" constant="8" id="tmw-eY-GjU"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="gxO-Nf-aCo" secondAttribute="trailing" id="2sX-cS-WtU"/>
                     <constraint firstItem="gxO-Nf-aCo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9Qx-a6-owq"/>
@@ -79,9 +84,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="btnDelete" destination="SUm-kI-o9h" id="o4u-9r-k4e"/>
-                <outlet property="btnEdit" destination="gV5-Yi-JUd" id="8rs-fi-7ba"/>
+                <outlet property="btnEdit" destination="1a7-TJ-kz7" id="1M5-Xe-ajf"/>
                 <outlet property="lbGroupName" destination="cly-QQ-hLf" id="syq-78-M8s"/>
                 <outlet property="lbInfo" destination="hmo-Az-TnL" id="1eB-aT-F67"/>
             </connections>
@@ -89,13 +94,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_delete" width="32" height="32.333332061767578"/>
         <image name="ic_edit" width="32" height="32.333332061767578"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
