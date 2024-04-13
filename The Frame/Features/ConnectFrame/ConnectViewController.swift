@@ -114,12 +114,22 @@ class ConnectViewController: BaseViewController {
     
     private func initViewControllers() {
         mListViewController.removeAll()
+        
         mListViewController.append(mScanFrameQRCVC)
         mListViewController.append(mSelectWifiVC)
         mListViewController.append(mInputWifiPassVC)
         mScanFrameQRCVC.mDelegate = self
-        
-        
+        mScanFrameQRCVC.didSelectBack = { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        mSelectWifiVC.didSelectBack = {[weak self] in
+            guard let self = self else {return}
+            self.mPageViewController.setViewControllers([self.mListViewController[0]], direction: .reverse, animated: true)
+        }
+        mInputWifiPassVC.didSelectBack = {[weak self] in
+            guard let self = self else {return}
+            self.mPageViewController.setViewControllers([self.mListViewController[1]], direction: .reverse, animated: true)
+        }
         mPageViewController.delegate = self
         mPageViewController.dataSource = self
         mPageViewController.setViewControllers([mListViewController[0]], direction: .forward, animated: false)

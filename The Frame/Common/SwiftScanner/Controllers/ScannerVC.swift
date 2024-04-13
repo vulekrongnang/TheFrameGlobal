@@ -1,10 +1,11 @@
 import UIKit
 import AVFoundation
+import RxSwift
+import RxGesture
+import SnapKit
 
 public class ScannerVC: UIViewController, HeaderViewControllerDelegate {
-    
 
-    public lazy var headerViewController:HeaderVC = .init()
     
     public lazy var cameraViewController:CameraVC = .init()
     
@@ -35,25 +36,9 @@ public class ScannerVC: UIViewController, HeaderViewControllerDelegate {
     public var successBlock:((String)->())?
     
     public var errorBlock:((Error)->())?
-    
-    public override var title: String?{
-        
-        didSet {
+    public var didSelectBack: (() -> ())?
 
-            if navigationController == nil {
-                headerViewController.title = title
-            }
-        }
-    }
- 
-    public var closeImage: UIImage?{
-        
-        didSet {
-            if navigationController == nil {
-                headerViewController.closeImage = closeImage ?? UIImage()
-            }
-        }
-    }
+    let disposeBag = DisposeBag()
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +51,9 @@ public class ScannerVC: UIViewController, HeaderViewControllerDelegate {
         cameraViewController.startCapturing()
     }
     
-    public func didClickedCloseButton() {}
+    public func didClickedCloseButton() {
+        didSelectBack?()
+    }
 }
 
 
@@ -80,8 +67,6 @@ extension ScannerVC{
         
         view.backgroundColor = .black
         
-        headerViewController.delegate = self
-        
         cameraViewController.metadata = metadata
         
         cameraViewController.animationStyle = animationStyle
@@ -91,8 +76,53 @@ extension ScannerVC{
         add(cameraViewController)
         
         if navigationController == nil {
-            add(headerViewController)
-            view.bringSubviewToFront(headerViewController.view)
+            let navView = UIView()
+            navView.backgroundColor = .white
+            view.addSubview(navView)
+            navView.snp.makeConstraints { make in
+                make.width.equalToSuperview()
+                make.height.equalTo(47)
+                make.top.left.right.equalToSuperview()
+            }
+            
+            let vBack = UIView()
+            vBack.backgroundColor = .white
+            navView.addSubview(vBack)
+            vBack.snp.remakeConstraints { make in
+                make.top.equalToSuperview()
+                make.left.equalToSuperview().offset(10)
+                make.width.height.equalTo(40)
+            }
+            
+            let ivBack = UIImageView(image: UIImage(named: "ic_back"))
+            vBack.addSubview(ivBack)
+            ivBack.snp.makeConstraints { make in
+                make.width.height.equalTo(24)
+                make.center.equalToSuperview()
+            }
+            
+            let lbTitle = UILabel()
+            lbTitle.text = "Quét mã QR"
+            lbTitle.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+            lbTitle.textColor = UIColor(hexString: "333752")
+            navView.addSubview(lbTitle)
+            lbTitle.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.centerY.equalTo(vBack)
+            }
+            
+            let vIndi = UIView()
+            vIndi.backgroundColor = .opaqueSeparator
+            navView.addSubview(vIndi)
+            vIndi.snp.makeConstraints { make in
+                make.height.equalTo(1)
+                make.width.equalToSuperview()
+                make.bottom.equalToSuperview()
+            }
+            
+            vBack.rx.tapGesture().when(.recognized).subscribe({[weak self] _ in
+                self?.didSelectBack?()
+            }).disposed(by: disposeBag)
         }
     }
     

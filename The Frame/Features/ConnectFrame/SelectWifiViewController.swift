@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 import LBBottomSheet
+import RxSwift
+import RxGesture
 
 class SelectWifiViewController: UIViewController {
     
@@ -8,9 +10,13 @@ class SelectWifiViewController: UIViewController {
     @IBOutlet weak var tbWifi: UITableView!
     
     var didSelectedWifi: ((String) -> Void)?
+    var didSelectBack: (() -> ())?
     
     private var mWifiList = [String]()
     
+    @IBAction func didTouchBack(_ sender: Any) {
+        didSelectBack?()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tbWifi.dataSource = self

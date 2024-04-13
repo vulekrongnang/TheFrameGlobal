@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -34,10 +35,21 @@
                                         <constraint firstAttribute="width" constant="24" id="WY1-Hx-k1H"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wD-pO-8Mh">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="didTouchBack:" destination="-1" eventType="touchUpInside" id="akX-HA-gv3"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="5wD-pO-8Mh" firstAttribute="leading" secondItem="6NV-8X-553" secondAttribute="leading" id="2fd-Ja-pnV"/>
                                 <constraint firstAttribute="height" constant="40" id="3tM-QI-ynj"/>
+                                <constraint firstAttribute="trailing" secondItem="5wD-pO-8Mh" secondAttribute="trailing" id="KaZ-e3-aWD"/>
+                                <constraint firstAttribute="bottom" secondItem="5wD-pO-8Mh" secondAttribute="bottom" id="Y0a-42-8GP"/>
+                                <constraint firstItem="5wD-pO-8Mh" firstAttribute="top" secondItem="6NV-8X-553" secondAttribute="top" id="ZxQ-Jb-WBX"/>
                                 <constraint firstItem="88z-me-3iS" firstAttribute="centerY" secondItem="6NV-8X-553" secondAttribute="centerY" id="dSq-7t-8Wd"/>
                                 <constraint firstAttribute="width" constant="40" id="ewP-WJ-8He"/>
                                 <constraint firstItem="88z-me-3iS" firstAttribute="centerX" secondItem="6NV-8X-553" secondAttribute="centerX" id="oOf-GX-dZj"/>

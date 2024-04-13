@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,7 +87,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_circle_gray" translatesAutoresizingMaskIntoConstraints="NO" id="5c7-6P-u4U">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_circle_gray" translatesAutoresizingMaskIntoConstraints="NO" id="5c7-6P-u4U">
                     <rect key="frame" x="208.66666666666666" y="173" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="Rbb-e1-s5k"/>
@@ -95,7 +95,7 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n22-fj-lAL">
-                    <rect key="frame" x="160.66666666666666" y="209" width="72" height="12"/>
+                    <rect key="frame" x="172.66666666666666" y="209" width="48" height="12"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P12-RQ-MGc">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="12"/>
@@ -121,9 +121,9 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit" translatesAutoresizingMaskIntoConstraints="NO" id="IBY-4c-ESg">
-                            <rect key="frame" x="48" y="-6" width="24" height="24"/>
+                            <rect key="frame" x="48" y="-6" width="0.0" height="24"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="24" id="nDX-c2-w3t"/>
+                                <constraint firstAttribute="width" id="nDX-c2-w3t"/>
                                 <constraint firstAttribute="height" constant="24" id="npG-8e-Xme"/>
                             </constraints>
                         </imageView>
@@ -157,7 +157,7 @@
                     <color key="textColor" red="0.3529411764705882" green="0.37647058823529411" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add_people" translatesAutoresizingMaskIntoConstraints="NO" id="ntE-HD-eGV">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add_people" translatesAutoresizingMaskIntoConstraints="NO" id="ntE-HD-eGV">
                     <rect key="frame" x="344" y="273" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="Ivu-AN-Fq3"/>
@@ -270,7 +270,7 @@
         <image name="ic_setting_circle_gray" width="32" height="32"/>
         <image name="ic_start_gray" width="32" height="32"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

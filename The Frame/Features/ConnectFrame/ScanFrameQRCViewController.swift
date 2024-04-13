@@ -18,6 +18,8 @@ class ScanFrameQRCViewController: BaseViewController {
     
     private var mWifiList = [String]()
     
+    public var didSelectBack: (() -> ())?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -39,6 +41,7 @@ class ScanFrameQRCViewController: BaseViewController {
         vc.setupScanner("Quét mã QR", .white, .none, nil ){ (result) in
             self.scanQRCSuccess(result)
         }
+        vc.didSelectBack = didSelectBack
         vc.willMove(toParent: self)
         addChild(vc)
         vc.view.frame = self.safeAreaview.bounds

@@ -24,6 +24,10 @@ public class HeaderVC: UIViewController {
     
     @IBOutlet weak var titleItem: UILabel!
     
+    @IBAction func didTouchBack(_ sender: Any) {
+        delegate?.didClickedCloseButton()
+    }
+    
     private let disposeBag = DisposeBag ()
     public weak var delegate:HeaderViewControllerDelegate?
     
@@ -42,29 +46,12 @@ public class HeaderVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupUI()
-    }
-}
-
-extension HeaderVC{
-    
-    func setupUI() {
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
         navigationBar.backgroundColor = .white
-        
-        
-        closeBtn.rx
-            .tapGesture()
-            .when(.recognized)
-            .subscribe(onNext: {gesture in
-                self.delegate?.didClickedCloseButton()
-            }
-        ).disposed(by: disposeBag)
     }
 }
-
 
 extension HeaderVC:UINavigationBarDelegate {
     

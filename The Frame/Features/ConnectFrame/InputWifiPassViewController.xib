@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,12 +33,23 @@
                                 <constraint firstAttribute="width" constant="24" id="bHH-v9-6C1"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-qm-0W8">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="didTouchBack:" destination="-1" eventType="touchUpInside" id="wim-iQ-MKs"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="1rf-5R-93I"/>
+                        <constraint firstItem="yEe-qm-0W8" firstAttribute="top" secondItem="kKt-rq-zaI" secondAttribute="top" id="8AU-8g-9qR"/>
+                        <constraint firstAttribute="trailing" secondItem="yEe-qm-0W8" secondAttribute="trailing" id="Iw6-vY-c3J"/>
                         <constraint firstItem="1Di-V7-sfY" firstAttribute="centerY" secondItem="kKt-rq-zaI" secondAttribute="centerY" id="Jpl-8Y-4px"/>
+                        <constraint firstItem="yEe-qm-0W8" firstAttribute="leading" secondItem="kKt-rq-zaI" secondAttribute="leading" id="YSg-if-SyC"/>
                         <constraint firstAttribute="height" constant="40" id="gsF-g2-Su7"/>
+                        <constraint firstAttribute="bottom" secondItem="yEe-qm-0W8" secondAttribute="bottom" id="quI-B1-XOZ"/>
                         <constraint firstItem="1Di-V7-sfY" firstAttribute="centerX" secondItem="kKt-rq-zaI" secondAttribute="centerX" id="w4t-bg-JQp"/>
                     </constraints>
                 </view>
@@ -176,7 +187,7 @@
         <image name="ic_wifi" width="32" height="32.333332061767578"/>
         <image name="phone_number_background" width="496" height="69.333335876464844"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

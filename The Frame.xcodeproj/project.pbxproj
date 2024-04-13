@@ -12,6 +12,7 @@
 		911768682BB9A666000B1EE6 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911768672BB9A666000B1EE6 /* SettingViewController.xib */; };
 		9117686B2BB9B4A3000B1EE6 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911768692BB9B4A3000B1EE6 /* GroupCell.swift */; };
 		9117686C2BB9B4A3000B1EE6 /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9117686A2BB9B4A3000B1EE6 /* GroupCell.xib */; };
+		911E3C2C2BCABB1600BDA176 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911E3C2B2BCABB1600BDA176 /* GoogleService-Info.plist */; };
 		913598362BBA94A8008DC6D3 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913598352BBA94A8008DC6D3 /* GroupDetailViewController.swift */; };
 		913598382BBA9503008DC6D3 /* GroupDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913598372BBA9503008DC6D3 /* GroupDetailViewController.xib */; };
 		914B02572BBD0DD600DC59E2 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B02552BBD0DD600DC59E2 /* UserCell.swift */; };
@@ -89,7 +90,6 @@
 		91AE06E12B936BEF0008E4C6 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 91AE06E02B936BEF0008E4C6 /* FirebaseStorageCombine-Community */; };
 		91AE06E42B936E130008E4C6 /* LBBottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 91AE06E32B936E130008E4C6 /* LBBottomSheet */; };
 		91AE06E72B936F240008E4C6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 91AE06E62B936F240008E4C6 /* Kingfisher */; };
-		91AE06E92B9372610008E4C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91AE06E82B9372610008E4C6 /* GoogleService-Info.plist */; };
 		91AE06EC2B9374470008E4C6 /* PhoneLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE06EB2B9374470008E4C6 /* PhoneLoginService.swift */; };
 		91C50D422B9761E600CF581A /* CreateGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91C50D412B9761E600CF581A /* CreateGroupViewController.xib */; };
 		91FAAEFD2BBD5EAD0026D6A7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FAAEE82BBD5EAD0026D6A7 /* Media.xcassets */; };
@@ -130,6 +130,7 @@
 		911768672BB9A666000B1EE6 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		911768692BB9B4A3000B1EE6 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		9117686A2BB9B4A3000B1EE6 /* GroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		911E3C2B2BCABB1600BDA176 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		913598352BBA94A8008DC6D3 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		913598372BBA9503008DC6D3 /* GroupDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupDetailViewController.xib; sourceTree = "<group>"; };
 		914B02552BBD0DD600DC59E2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -180,7 +181,6 @@
 		91AE06A42B935F9D0008E4C6 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		91AE06A72B9361F10008E4C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		91AE06A92B93621F0008E4C6 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		91AE06E82B9372610008E4C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91AE06EB2B9374470008E4C6 /* PhoneLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginService.swift; sourceTree = "<group>"; };
 		91C50D412B9761E600CF581A /* CreateGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateGroupViewController.xib; sourceTree = "<group>"; };
 		91FAAEE82BBD5EAD0026D6A7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -417,9 +417,9 @@
 				91A003362B93914100873941 /* Extension */,
 				91A003332B93908700873941 /* Common */,
 				91AE06EA2B9374370008E4C6 /* Services */,
-				91AE06E82B9372610008E4C6 /* GoogleService-Info.plist */,
 				91AE068E2B9359540008E4C6 /* AppDelegate.swift */,
 				91AE06942B9359540008E4C6 /* Main.storyboard */,
+				911E3C2B2BCABB1600BDA176 /* GoogleService-Info.plist */,
 				91AE06972B9359550008E4C6 /* Assets.xcassets */,
 				91AE06992B9359550008E4C6 /* LaunchScreen.storyboard */,
 				91AE069C2B9359550008E4C6 /* Info.plist */,
@@ -643,11 +643,11 @@
 				918BF3CC2B94A4960041BDD5 /* VerifyCodeViewController.xib in Resources */,
 				913598382BBA9503008DC6D3 /* GroupDetailViewController.xib in Resources */,
 				91FAAF092BBD5EAD0026D6A7 /* HeaderVC.xib in Resources */,
-				91AE06E92B9372610008E4C6 /* GoogleService-Info.plist in Resources */,
 				91A0033F2B9395F400873941 /* PhoneCodeItemView.xib in Resources */,
 				91AE06982B9359550008E4C6 /* Assets.xcassets in Resources */,
 				FABD9C972BBDA4E20062364F /* SyncMediaViewController.xib in Resources */,
 				91C50D422B9761E600CF581A /* CreateGroupViewController.xib in Resources */,
+				911E3C2C2BCABB1600BDA176 /* GoogleService-Info.plist in Resources */,
 				914B02582BBD0DD600DC59E2 /* UserCell.xib in Resources */,
 				91AE06962B9359540008E4C6 /* Main.storyboard in Resources */,
 				91FAAF0F2BBD5EF60026D6A7 /* ConnectViewController.xib in Resources */,
@@ -911,9 +911,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RD3USDX79;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The Frame/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Chúng tôi cần quyền truy cập vào Bluetooth để có thể chia sẽ thông tin và hỗ trợ kết nối Wifi ở Khung tranh bạn đang sở hữu";
@@ -948,9 +948,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RD3USDX79;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The Frame/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Chúng tôi cần quyền truy cập vào Bluetooth để có thể chia sẽ thông tin và hỗ trợ kết nối Wifi ở Khung tranh bạn đang sở hữu";
