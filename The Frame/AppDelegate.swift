@@ -61,5 +61,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
+    
+    func showLoginView() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.overrideUserInterfaceStyle = .light
+        let loginVC = LoginViewController()
+        let nav = UINavigationController(rootViewController: loginVC)
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+    }
 }
 

@@ -40,6 +40,7 @@ class PhoneLoginService {
                 self.delegate?.requestOTPSuccess(verificationID: verificationID)
             }
     }
+    
     func authenOTP(code:String, verificationID: String?){
         guard let verificationID =  verificationID  else {return}
         let credential = PhoneAuthProvider.provider().credential(
@@ -61,6 +62,16 @@ class PhoneLoginService {
             }
             let uid = authResult?.user.uid ?? ""
             self.delegate?.verifySuccess(uid: uid)
+        }
+    }
+    
+    func deleteCurrentUser(onSuccess: @escaping (() -> Void), onError: @escaping ((String) -> Void)) {
+        let user = PreferenceUtils.instance.getUser()
+        UserService.instance.deleteUser(userId: user.id) {
+            PreferenceUtils.instance.deleteUser()
+            onSuccess()
+        } onError: { String in
+            onError("Có lỗi trong quá trình xử lý, vui lòng thử lại sau!")
         }
     }
 }

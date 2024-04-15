@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="btnAddGroup" destination="XfS-5X-zVS" id="1gZ-qX-b7v"/>
                 <outlet property="btnChangeAvatar" destination="6Uf-Ao-Eqn" id="HAz-xJ-DGm"/>
+                <outlet property="btnDeleteAccount" destination="0jg-9P-mTX" id="8M5-KB-lDT"/>
                 <outlet property="btnSetting" destination="cBN-8V-KAY" id="iy7-Uf-o9d"/>
                 <outlet property="ivAvatar" destination="kGT-ji-OLW" id="E3P-K4-bLw"/>
                 <outlet property="lbGroupCount" destination="0uX-Ih-dO6" id="bzh-K5-NiB"/>
@@ -181,20 +182,40 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cK0-Cs-VR7">
-                            <rect key="frame" x="0.0" y="56.000000000000028" width="393" height="483.66666666666674"/>
+                            <rect key="frame" x="0.0" y="56.000000000000028" width="393" height="416.66666666666674"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jg-9P-mTX">
+                            <rect key="frame" x="32" y="488.66666666666669" width="329" height="35.000000000000057"/>
+                            <color key="backgroundColor" systemColor="systemGray3Color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="jX4-4B-bm9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Xóa tài khoản">
+                                <color key="titleColor" systemColor="systemRedColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusEx">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0jg-9P-mTX" secondAttribute="trailing" constant="32" id="2ty-Il-zDe"/>
+                        <constraint firstAttribute="bottom" secondItem="0jg-9P-mTX" secondAttribute="bottom" constant="16" id="BdQ-g2-Wtl"/>
                         <constraint firstItem="AoI-CL-Cqz" firstAttribute="leading" secondItem="Vur-wH-qeb" secondAttribute="leading" constant="18" id="C7J-Hj-FdB"/>
                         <constraint firstItem="cK0-Cs-VR7" firstAttribute="top" secondItem="AoI-CL-Cqz" secondAttribute="bottom" id="E76-jk-Xuj"/>
+                        <constraint firstItem="0jg-9P-mTX" firstAttribute="leading" secondItem="Vur-wH-qeb" secondAttribute="leading" constant="32" id="FWH-qI-1S4"/>
                         <constraint firstAttribute="trailing" secondItem="cK0-Cs-VR7" secondAttribute="trailing" id="FpH-GX-yCh"/>
                         <constraint firstItem="AoI-CL-Cqz" firstAttribute="top" secondItem="Vur-wH-qeb" secondAttribute="top" constant="12" id="OrX-UI-gwK"/>
                         <constraint firstItem="cK0-Cs-VR7" firstAttribute="leading" secondItem="Vur-wH-qeb" secondAttribute="leading" id="Rwp-gV-X2H"/>
                         <constraint firstAttribute="trailing" secondItem="AoI-CL-Cqz" secondAttribute="trailing" constant="18" id="T44-m8-ODR"/>
-                        <constraint firstAttribute="bottom" secondItem="cK0-Cs-VR7" secondAttribute="bottom" id="WfF-FY-is1"/>
+                        <constraint firstItem="0jg-9P-mTX" firstAttribute="top" secondItem="cK0-Cs-VR7" secondAttribute="bottom" constant="16" id="qe1-Bs-ARo"/>
                     </constraints>
                 </view>
             </subviews>
@@ -241,6 +262,12 @@
         <image name="ic_setting_normal" width="32" height="32"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

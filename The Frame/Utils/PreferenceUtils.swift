@@ -131,4 +131,11 @@ class PreferenceUtils: NSObject {
         }
         return post ?? PostModel()
     }
+    
+    func deleteUser() {
+        UserDefaults.standard.removeObject(forKey: PreferenceUtils.USER_INFO_KEY)
+        UserDefaults.standard.removeObject(forKey: PreferenceUtils.GROUP_INFO_KEY)
+        UserDefaults.standard.removeObject(forKey: PreferenceUtils.POST_INFO_KEY)
+        UserDefaults.standard.removeObject(forKey: PreferenceUtils.FRAME_INFO_KEY)
+    }
 }

@@ -22,6 +22,7 @@ class SettingViewController: BaseViewController {
     @IBOutlet weak var lbGroupCount: UILabel!
     @IBOutlet weak var tfSearchGroup: UITextField!
     @IBOutlet weak var tbGroup: UITableView!
+    @IBOutlet weak var btnDeleteAccount: UIButton!
     
     weak var parrentVC: HomeViewController? = nil
     var didSelectCreateGroup: (() -> Void)? = nil
@@ -52,6 +53,9 @@ class SettingViewController: BaseViewController {
         }).disposed(by: disposeBag)
         tfSearchGroup.rx.text.changed.bind { [weak self] _ in
             self?.searchGroup()
+        }.disposed(by: disposeBag)
+        btnDeleteAccount.rx.tap.bind { [weak self] _ in
+            self?.handleDeleteAccount()
         }.disposed(by: disposeBag)
     }
     
@@ -119,6 +123,19 @@ class SettingViewController: BaseViewController {
         isInEditMode = !isInEditMode
         btnSetting.image = isInEditMode ? UIImage(named: "ic_setting_active") : UIImage(named: "ic_setting_normal")
         tbGroup.reloadData()
+    }
+    
+    func handleDeleteAccount() {
+        showAlertConfirm(message: "Bạn có chắc muốn xóa tài khoản của mình không?") {
+            PhoneLoginService().deleteCurrentUser { [weak self] in
+                self?.showAlert(message: "Xóa user thành công!") { [weak self] in
+                    self?.appDelegate.showLoginView()
+                }
+            } onError: { [weak self] message in
+                self?.showAlertError(message: message)
+            }
+
+        }
     }
 }
 

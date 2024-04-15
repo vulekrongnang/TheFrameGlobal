@@ -119,4 +119,14 @@ class UserService: NSObject {
             return nil
         }
     }
+    
+    func deleteUser(userId: String?, onSuccess: @escaping (() -> Void), onError: @escaping ((String) -> Void)) {
+        UserService.ref.child(userId ?? "").removeValue { error, db in
+            if let error = error {
+                onError("")
+            } else {
+                onSuccess()
+            }
+        }
+    }
 }
